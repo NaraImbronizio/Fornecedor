@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Fornecedor.Models.Fornecedores>
+
+@{
+    ViewData["Title"] = "Lista Fornecedores";
+}
+<h1 style="text-align:center">Fornecedores</h1>
+
+<table class="table" style="background-color: black!important; color: white!important">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Endereco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tefefone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Endereco
+                </td>
+                <td>
+                    @item.Telefone
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
